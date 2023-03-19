@@ -9,7 +9,7 @@ namespace MonoEngine.Engine.Core
         public Vector2 position;
         AudioListener audioListener;
 
-        float ppu;
+        float ppu = 100;
         public float pixelsPerUnit
         {
             get { return ppu; }
