@@ -9,7 +9,7 @@ namespace MonoEngine.Engine
     public static class EngineInterface
     {
         public static int WINDOW_WIDTH = 1280;
-        public static int WINDOW_HEIGHT = 1080;
+        public static int WINDOW_HEIGHT = 720;
         public static int TARGET_FPS = 60;
 
         private static Game game;

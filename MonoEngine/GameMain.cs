@@ -10,7 +10,7 @@ namespace MonoEngine
     public class GameMain : Game {
 
         public static int WINDOW_WIDTH = 1280;
-        public static int WINDOW_HEIGHT = 1080;
+        public static int WINDOW_HEIGHT = 720;
         public const int TARGET_FPS = 60;
 
         private GraphicsDeviceManager graphics;
@@ -21,7 +21,7 @@ namespace MonoEngine
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
             Window.AllowAltF4 = true;
-            TargetElapsedTime = TimeSpan.FromMilliseconds(1000f / TARGET_FPS); //60 target fps
+            TargetElapsedTime = TimeSpan.FromMilliseconds(1000f / TARGET_FPS);
             graphics.PreferredBackBufferWidth = WINDOW_WIDTH = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
             graphics.PreferredBackBufferHeight = WINDOW_HEIGHT = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
 
