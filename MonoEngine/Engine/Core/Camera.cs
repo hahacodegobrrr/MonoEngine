@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace MonoEngine.Core
+namespace MonoEngine.Engine.Core
 {
     public class Camera
     {

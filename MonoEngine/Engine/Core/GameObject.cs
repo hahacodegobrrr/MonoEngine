@@ -1,7 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MonoEngine.Engine.Core;
 
-namespace MonoEngine.Core
+namespace MonoEngine.Engine.Core
 {
     public class GameObject
     {

@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
-using MonoEngine.UI;
+using MonoEngine.Engine.UI;
 using System.Collections.Generic;
 
-namespace MonoEngine.Core
+namespace MonoEngine.Engine.Core
 {
     public abstract class Scene
     {

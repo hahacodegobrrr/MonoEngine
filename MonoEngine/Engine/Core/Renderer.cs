@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 
-namespace MonoEngine.Core
+namespace MonoEngine.Engine.Core
 {
     public abstract class Renderer
     {

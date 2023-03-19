@@ -3,7 +3,7 @@ using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace MonoEngine.Core
+namespace MonoEngine.Engine.Core
 {
     public static class InputManager
     {

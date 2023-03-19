@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MonoEngine.Core
+namespace MonoEngine.Engine.Core
 {
     public class AnimationManager
     {

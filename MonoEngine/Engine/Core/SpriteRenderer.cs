@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
-namespace MonoEngine.Core
+namespace MonoEngine.Engine.Core
 {
     public class SpriteRenderer : Renderer
     {

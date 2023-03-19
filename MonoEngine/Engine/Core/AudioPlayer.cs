@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Media;
 using System.Collections.Generic;
 
-namespace MonoEngine.Core
+namespace MonoEngine.Engine.Core
 {
     public class AudioPlayer
     {
@@ -26,7 +26,7 @@ namespace MonoEngine.Core
         public void AddSFX(string name)
         {
             string path = string.Format("Assets/Audio/sfx/{0}", name);
-            sfx.Add(name,   EngineInterface.LoadContent<SoundEffect>(path));
+            sfx.Add(name, EngineInterface.LoadContent<SoundEffect>(path));
         }
 
         public bool BGMPlaying()

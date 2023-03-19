@@ -1,16 +1,18 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using MonoEngine.Core;
-using MonoEngine.Math;
+using MonoEngine.Engine.Core;
+using MonoEngine.Engine.Math;
 
-namespace MonoEngine.UI
+namespace MonoEngine.Engine.UI
 {
-    public class Button : UIObject {
+    public class Button : UIObject
+    {
 
         UIButtonState state;
         bool clickInitiated;
 
-        public Button(string name, string spritePath, Scene scene) : base(name, spritePath, scene, true) {
+        public Button(string name, string spritePath, Scene scene) : base(name, spritePath, scene, true)
+        {
             state = UIButtonState.Off;
             renderer.animationManager.AddStaticImage(name + "_base");
             renderer.animationManager.StartAnimation(name + "_base");
@@ -19,10 +21,11 @@ namespace MonoEngine.UI
             //renderer.animationManager.AddAnimation(name + "_clicked", Animation.DEFAULT_FPS, true);
         }
 
-        public override void Update() {
+        public override void Update()
+        {
             if (!active) return;
             bounds = new Rectangle((int)position.X, (int)position.Y, (int)scale.X, (int)scale.Y);
-            
+
             //state logic
             if (clickInitiated)
                 state = UIButtonState.Click;
@@ -30,24 +33,30 @@ namespace MonoEngine.UI
                 state = UIButtonState.Hover;
             else
                 state = UIButtonState.Off;
-            
+
             //button logic
-            if (Collisions.Overlapping(InputManager.mousePosition, bounds)) {
+            if (Collisions.Overlapping(InputManager.mousePosition, bounds))
+            {
                 if (InputManager.LeftMousePressedThisFrame())
                     clickInitiated = true;
-                if (InputManager.LeftMouseReleasedThisFrame() && clickInitiated) {
+                if (InputManager.LeftMouseReleasedThisFrame() && clickInitiated)
+                {
                     clickInitiated = false;
                     OnClick();
                 }
-            } else {
+            }
+            else
+            {
                 if (InputManager.LeftMouseReleasedThisFrame() || InputManager.LeftMousePressedThisFrame())
                     clickInitiated = false;
             }
         }
 
-        public override void Draw(SpriteBatch sb) {
+        public override void Draw(SpriteBatch sb)
+        {
             Color mask;
-            switch (state) {
+            switch (state)
+            {
                 case UIButtonState.Hover:
                     mask = new Color(230, 230, 230);
                     break;
@@ -62,12 +71,14 @@ namespace MonoEngine.UI
             ((UIRenderer)renderer).Draw(sb, mask);
         }
 
-        public void OnClick() {
+        public void OnClick()
+        {
             scene.ButtonClicked(this);
         }
     }
 
-    public enum UIButtonState {
+    public enum UIButtonState
+    {
         Off,
         Hover,
         Click

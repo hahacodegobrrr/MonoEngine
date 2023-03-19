@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MonoEngine.Core
+namespace MonoEngine.Engine.Core
 {
     public static class Time
     {

@@ -1,10 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using MonoEngine.Core;
+using MonoEngine.Engine;
+using MonoEngine.Engine.Core;
 using System;
 
-namespace MonoEngine {
+namespace MonoEngine
+{
     public class GameMain : Game {
 
         public static int WINDOW_WIDTH = 1280;
