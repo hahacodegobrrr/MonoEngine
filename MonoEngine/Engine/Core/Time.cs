@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace FlappyBird.Engine.Core {
+namespace MonoEngine.Engine.Core {
     public static class Time {
         public static double now { get; private set; }
         public static float deltaTime { get; private set; }
